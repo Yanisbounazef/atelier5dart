@@ -13,3 +13,11 @@ void verifierMotdepasse(String mp) {
 
   print("Mot de passe valide.");
 }
+
+void main() {
+  try {
+    verifierMotdepasse("abc");
+  } on MotdepasseCourtException catch (e) {
+    print(e);
+  }
+}
