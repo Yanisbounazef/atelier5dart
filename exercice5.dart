@@ -20,5 +20,11 @@ void main() {
 
     int carre = nombre * nombre;
     print("Le carré de $nombre est : $carre");
+  } on FormatException {
+    print("Erreur : veuillez saisir un nombre entier valide.");
+  } on NombreNegatifException catch (e) {
+    print(e);
+  } finally {
+    print("Fin d'opération");
   }
 }
